@@ -68,9 +68,75 @@
          </div>
          <div class="conteudo">
 			<h2>Formulário</h2>
+			<!-- Poderia ter posto fieldset e legend-->
 			<form>
-				<label>Nome: </label>
-				<input type="text"/>
+				<div class="row">
+					<div class="label">
+						<label>Nome completo:</label>
+					</div>
+					<div class="input">
+						<input type="text" id="nome"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="label">
+						<label>E-mail:</label>
+					</div>
+					<div class="input">
+						<input type="email" id="email"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="label">
+						<label>Telefone:</label>
+					</div>
+					<div class="input">
+						<input type="text" id="telefone"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="label">
+						<label>Endereço:</label>
+					</div>
+					<div class="input">
+						<input type="text" id="endereco"/>
+					</div>	
+				</div>
+				<div class="row">
+					<div class="label">
+						<label>CPF:</label>
+					</div>
+					<div class="input">
+						<input type="text" id="cpf"/>
+					</div>
+				</div>		
+				<div class="row">
+					<div class="label">
+						<label>CNPJ:</label>
+					</div>
+					<div class="input">
+						<input type="text" id="cnpj"/>
+					</div>	
+				</div>				
+				<div class="row">
+					<div class="label">
+						<label>Senha:</label>
+					</div>
+					<div class="input">
+						<input type="password" id="senha"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="label">
+						<label>Foto de Perfil:</label>
+					</div>
+					<div class="input">
+						<input type="file" id="imgUser"/>
+					</div>
+				</div>
+				<div id="imgExigir">
+					<img id="preview" src="" />
+				</div>
 			</form>
 		</div>
 		</div>
