@@ -7,6 +7,7 @@ function validar(){
 	var cpf = formUser.cpf.value;
 	var cnpj = formUser.cnpj.value;
 	var senha = formUser.senha.value;
+	var confirmarsenha = formUser.confirmarsenha.value;
 	
 	if(nome == "" || nome.length <=3){
 		alert("Informe o seu nome completo!");
@@ -63,6 +64,12 @@ function validar(){
 		formUser.senha.focus();
 		return false;
 	}
+	
+	if(confirmarsenha != senha){
+		alert("Senhas não conferem");
+		formUser.confirmarsenha.focus();
+		return false;
+	}
 }
 
 function mascaratelefone(i){
@@ -72,7 +79,7 @@ function mascaratelefone(i){
 		return;
 	}
 	i.setAttribute("maxlength", "14");
-	if(v.length == 1) i.value ="("+ i.value;
+	if(v.length == 1) i.value ="(" + i.value;
 	if(v.length == 3) i.value +=")";
 	if(v.length == 9) i.value +="-";
 }
@@ -98,4 +105,14 @@ function mascaraCNPJ(i){
 	if(v.length == 2 || v.length == 6) i.value +=".";
 	if(v.length == 10) i.value +="/";
 	if(v.length == 15) i.value +="-";
+}
+
+function lerImg(){
+	if(this.files && this.files[0]){
+		var file = new FileReader();
+		file.onload = function (e){
+			document.getElementById("preview").src = e.target.result;
+		}
+		file.readAsDataURL(this.files[0]);
+	}
 }
